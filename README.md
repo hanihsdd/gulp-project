@@ -1,6 +1,6 @@
 # Gulp Starter Web Dev Workflow
 
-Based on [gulp-starter by zellwk][https://github.com/zellwk/gulp-starter-csstricks]
+Based on [gulp-starter by zellwk](https://github.com/zellwk/gulp-starter-csstricks)
 
 Features separate development and build tasks. 
 
