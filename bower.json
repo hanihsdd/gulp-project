@@ -1,0 +1,22 @@
+{
+  "name": "gulp-starter",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "hsdd"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12"
+  }
+}

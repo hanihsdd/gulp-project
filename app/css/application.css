@@ -1,0 +1,13 @@
+body {
+  background-color: blue; }
+
+h1 {
+  background-color: red; }
+
+a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*# sourceMappingURL=application.css.map */
