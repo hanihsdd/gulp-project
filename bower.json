@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "^2.2.12"
+    "susy": "^2.2.12",
+    "mappy-breakpoints": "^0.2.1"
   }
 }

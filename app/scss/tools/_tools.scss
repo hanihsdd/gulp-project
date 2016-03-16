@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+
+/** 
+ * Global mixins and functions
+ * Gradient mixins, font sizing mixins
+ * Local mixins/functions belong in their local partial. 
+ */
+
+
+// Clearfix
+@mixin cf {
+ 	&:before,
+ 	&:after {
+ 		content: "";
+ 		display: table;
+ 	}
+
+ 	&:after {
+ 		clear: both;
+ 	}
+}
+
+
+// Vertical Rhythm & Font Size
+// Font size will take in a custom font size
+// then output in REM with a PX fallback, it will also calculate
+// a line height to fit the vertical rhythm
+// a custom line height can also be specified to override the default
+
+// Taken from inuit.css framework by Harry Roberts
+// https://github.com/inuitcss/tools.mixins
+
+
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($ont-size / $base-line-height) * ($base-line-height / $font-size);
+    } // @if
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        } // @if
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        } // @elseif
+
+    } // @else
+ 
+} // end mixin

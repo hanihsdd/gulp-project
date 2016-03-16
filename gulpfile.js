@@ -38,14 +38,14 @@ var gulp = require("gulp");
 // ==============================
 
 gulp.task("sass", function() {
-	// return files with .scss in dir + child dirs
+	// return files with .scss in dir
 	return gulp.src("app/scss/*.scss")
 		// Initialise sourcemaps
 		.pipe(sourcemaps.init())
 		// Autoprefixer
 		.pipe(autoprefixer())
 		// compile sass to css
-		.pipe(sass())
+		.pipe(sass().on("error", sass.logError))
 		// Write sourcemap to current working directory relative to output dir
 		.pipe(sourcemaps.write("./"))
 		// Outputs css to css folder

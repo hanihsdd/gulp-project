@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+
+/** 
+ * Normalize, resets, global box-sizing
+ * High level, far reaching styles. Seldom modified.
+ */
+
+@import "generic.normalize";
+@import "generic.reset";
+@import "generic.shared";
